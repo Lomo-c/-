@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jishu.mapper.UserMapper">
 
-    <resultMap id="BaseResultMap" type="com.jishu.domain.User">
+    <resultMap id="BaseResultMap" type="com.jishu.domain.User_info">
             <id property="user_id" column="user_id" jdbcType="VARCHAR"/>
             <result property="nick_name" column="nick_name" jdbcType="VARCHAR"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>

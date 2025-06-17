@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 用户信息
  * @TableName user_info
  */
-public class User implements Serializable {
+public class User_info implements Serializable {
 
     /**
      * 用户id
