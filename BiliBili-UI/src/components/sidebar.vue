@@ -1,12 +1,12 @@
 <template>
-    <aside class="w-51 h-screen bg-base-100 text-base-content flex flex-col">
+    <aside class="w-50 h-screen bg-base-100 text-base-content flex flex-col">
         <div class="p-4 flex items-center gap-2">
-            <img src="../assets/logo.png" alt="logo" class="w-10 h-10" />
-            <span class="text-xl font-bold">即时短视频</span>
+            <img src="../assets/logo.png" alt="logo" class="w-8 h-8 ml-1.5" />
+            <span class="text-lg font-bold">即时短视频</span>
         </div>
-        <ul class="menu px-4 space-y-2 w-full">
+        <ul class="menu px-4 py-0 space-y-2 w-full">
             <li v-for="item in menuItems" :key="item.to">
-                <router-link :to="item.to" class="text-lg rounded-lg" active-class="active" :exact="item.exact">
+                <router-link :to="item.to" class="rounded-lg" active-class="active" :exact="item.exact">
                     <span v-html="item.svg"></span>
                     {{ item.label }}
                 </router-link>
