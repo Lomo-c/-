@@ -38,7 +38,7 @@
                     </svg>
                     收藏
                 </button>
-                <button class="btn btn-primary">登录</button>
+                <button class="btn btn-neutral">登录</button>
             </div>
         </header>
 
