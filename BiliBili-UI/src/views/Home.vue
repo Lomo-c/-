@@ -1,0 +1,99 @@
+<template>
+    <div class="h-full flex flex-col">
+        <!-- Header -->
+        <header class="flex items-center justify-between p-4">
+            <!-- Search Bar -->
+            <div>
+                <label class="input input-bordered flex items-center gap-2 w-96">
+                    <input type="text" class="grow" placeholder="南航开通海口往返青岛" />
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="w-4 h-4 opacity-70">
+                        <path fill-rule="evenodd"
+                            d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </label>
+            </div>
+
+            <!-- User Actions -->
+            <div class="flex items-center gap-2">
+                <button class="btn btn-ghost gap-2">
+                    <svg t="1750093271529" class="w-5 h-5" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4724">
+                        <path
+                            d="M194.4 823.2c-9.6 0-17.6-6.4-20-16L72 366.4H60c-26.4-0.8-47.2-22.4-47.2-48.8s21.6-48 48.8-48c26.4 0 48.8 21.6 48.8 48.8 0 6.4-1.6 13.6-4 20l-7.2 13.6 217.6 97.6L496 172l-12-8.8c-12.8-8.8-20.8-24-20.8-40 0-26.4 21.6-48.8 48.8-48.8s48.8 21.6 48.8 48.8c0 16-8 31.2-20.8 40l-12 8 160 278.4 236.8-98.4-6.4-14.4c-2.4-6.4-4-12.8-4-19.2 0-26.4 21.6-48.8 48.8-48.8 26.4 0 48.8 21.6 48.8 48.8 0 26.4-21.6 48.8-48.8 48.8h-13.6L847.2 808c-2.4 9.6-10.4 16-20 16H194.4z m16-40h601.6l88-377.6-212 88c-2.4 0.8-4.8 1.6-8 1.6-7.2 0-13.6-4-17.6-9.6L510.4 224 340.8 485.6c-4 5.6-10.4 9.6-16.8 9.6-3.2 0-5.6-0.8-8-1.6L123.2 407.2l87.2 376zM161.6 936c-13.6 0-24-10.4-24-24s10.4-24 24-24h699.2c13.6 0 24 10.4 24 24s-10.4 24-24 24H161.6z"
+                            fill="" p-id="4725"></path>
+                    </svg>
+                    会员
+                </button>
+                <button class="btn btn-ghost gap-2">
+                    <svg t="1750093325209" class="w-5 h-5" viewBox="0 0 1061 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="9849">
+                        <path
+                            d="M478.354556 872.243917H126.697793a42.514148 42.514148 0 0 1-42.232598-42.232597v-703.876628a42.514148 42.514148 0 0 1 42.232598-42.232598h703.876628a42.232598 42.232598 0 0 1 42.232598 42.232598v352.219864a42.232598 42.232598 0 0 0 84.465195 0V126.697793A126.979344 126.979344 0 0 0 830.574421 0h-703.876628A126.979344 126.979344 0 0 0 0 126.697793v703.876628A126.979344 126.979344 0 0 0 126.697793 957.272214h351.656763a42.232598 42.232598 0 0 0 0-84.465195z"
+                            p-id="9850"></path>
+                        <path
+                            d="M661.36248 450.481042h-366.015847a42.232598 42.232598 0 1 0 0 84.465195h366.015847a42.232598 42.232598 0 0 0 0-84.465195zM661.36248 253.395586h-366.015847a42.232598 42.232598 0 1 0 0 84.465195h366.015847a42.232598 42.232598 0 0 0 0-84.465195zM1057.785797 720.769667a31.533673 31.533673 0 0 0-26.465762-21.6794l-132.610356-17.45614-61.096492-119.095926a31.815224 31.815224 0 0 0-28.155065-17.737691 32.659876 32.659876 0 0 0-28.155065 18.582343l-56.31013 120.785229-132.047256 21.116299a32.378325 32.378325 0 0 0-25.902659 22.524052 32.096774 32.096774 0 0 0 8.72807 32.941427l94.882569 92.067063-20.834748 132.328806a32.378325 32.378325 0 0 0 12.95133 32.941426 31.815224 31.815224 0 0 0 18.582343 5.912563 33.222977 33.222977 0 0 0 15.485286-3.941709l117.406621-64.193548 119.377476 60.814941a32.659876 32.659876 0 0 0 46.737409-36.320034l-24.776458-131.202604 94.601019-94.882569a32.378325 32.378325 0 0 0 7.601868-33.504528z m-159.92077 94.319468a32.096774 32.096774 0 0 0-9.009621 28.155065l15.766836 84.465196-76.018675-38.572439a31.815224 31.815224 0 0 0-30.12592 0l-74.892473 40.543293 12.95133-84.465195a32.378325 32.378325 0 0 0-9.572723-28.155065l-61.941143-57.999434 84.465196-13.514432a33.222977 33.222977 0 0 0 24.213356-18.019241l37.727787-77.144879 38.85399 76.018676a31.815224 31.815224 0 0 0 24.494906 17.17459l84.465196 11.262026z"
+                            p-id="9851"></path>
+                    </svg>
+                    收藏
+                </button>
+                <button class="btn btn-primary">登录</button>
+            </div>
+        </header>
+
+        <!-- Content Grid -->
+        <main class="flex-1 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 content-start">
+             <VideoCard v-for="video in videos" :key="video.id" :thumbnail="video.thumbnail" :duration="video.duration"
+                :title="video.title" :views="video.views" :uploadDate="video.uploadDate" />
+        </main>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import VideoCard from '../components/VideoCard.vue';
+
+const videos = ref([
+    {
+        id: 1,
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrCMsn8al18DOSWAaEM-uR1tcivIdNXo3LA&s',
+        duration: '12:11',
+        title: '曾经的我，低估了这个角色！情场上的千层套路！幼稚园的直男收',
+        views: '70.4万次播放',
+        uploadDate: '4天前',
+    },
+    {
+        id: 2,
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrCMsn8al18DOSWAaEM-uR1tcivIdNXo3LA&s',
+        duration: '08:32',
+        title: '从零开始手把手教你学摄影，20节课带你从小白到大师',
+        views: '12.3万次播放',
+        uploadDate: '2天前',
+    },
+    {
+        id: 3,
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrCMsn8al18DOSWAaEM-uR1tcivIdNXo3LA&s',
+        duration: '23:55',
+        title: 'AI生成视频竟然发展到这种程度了？AI视频短片《迭代南翔》',
+        views: '100.2万次播放',
+        uploadDate: '1周前',
+    },
+    {
+        id: 4,
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrCMsn8al18DOSWAaEM-uR1tcivIdNXo3LA&s',
+        duration: '05:19',
+        title: '【AIGC】极其简单却被忽视的AI三维制作技巧，提高收入的入门场地',
+        views: '5.6万次播放',
+        uploadDate: '3天前',
+    },
+    {
+        id: 5,
+        thumbnail: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxrCMsn8al18DOSWAaEM-uR1tcivIdNXo3LA&s',
+        duration: '15:01',
+        title: '【莱斯利】漫威蜘蛛侠2最高难度！决战蜥蜴博士-第12期',
+        views: '33.8万次播放',
+        uploadDate: '5天前',
+    },
+]);
+</script>
