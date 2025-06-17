@@ -1,6 +1,6 @@
 package com.jishu.controller;
 
-import com.jishu.domain.Menultems;
+import com.jishu.domain.Menuitems;
 import com.jishu.service.IMenuitemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class ApiController {
     }
 
     @RequestMapping("/api/sidebar")
-    public List<Menultems> getSidebarRoutes() {
+    public List<Menuitems> getSidebarRoutes() {
         return menuitemsService.list();
     }
 }

@@ -5,7 +5,7 @@ import java.io.Serializable;
  * 
  * @TableName menultems
  */
-public class Menultems implements Serializable {
+public class Menuitems implements Serializable {
 
     private Integer id;
     /**

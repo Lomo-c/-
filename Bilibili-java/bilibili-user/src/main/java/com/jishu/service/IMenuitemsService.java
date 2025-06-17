@@ -1,7 +1,7 @@
 package com.jishu.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.jishu.domain.Menultems;
+import com.jishu.domain.Menuitems;
 
-public interface IMenuitemsService extends IService<Menultems> {
+public interface IMenuitemsService extends IService<Menuitems> {
 } 
