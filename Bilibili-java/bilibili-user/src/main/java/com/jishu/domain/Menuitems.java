@@ -1,4 +1,5 @@
 package com.jishu.domain;
+import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
 
 /**
@@ -8,7 +9,8 @@ import java.io.Serializable;
 public class Menuitems implements Serializable {
 
     private Integer id;
-    private String redirect_url;
+    @TableField("redirect_url")
+    private String redirectUrl;
     /**
      * 标签名
      */
@@ -25,11 +27,11 @@ public class Menuitems implements Serializable {
         return this.id;
     }
 
-    public void setRedirect_url(String redirect_url) {
-        this.redirect_url = redirect_url;
+    public void setRedirectUrl(String redirectUrl) {
+        this.redirectUrl = redirectUrl;
     }
-    public String getRedirect_url() {
-        return this.redirect_url;
+    public String getRedirectUrl() {
+        return this.redirectUrl;
     }
 
     public void setLabel(String label) {

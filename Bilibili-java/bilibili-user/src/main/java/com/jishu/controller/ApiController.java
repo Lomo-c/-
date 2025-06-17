@@ -16,6 +16,5 @@ public class ApiController {
     @RequestMapping("/api/sidebar")
     public List<Menuitems> getSidebarRoutes() {
         return menuitemsService.list();
-
     }
 }
