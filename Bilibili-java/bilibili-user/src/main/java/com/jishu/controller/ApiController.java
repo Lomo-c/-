@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class ApiController {
     @Autowired
     private IMenuitemsService menuitemsService;
 
-    @RequestMapping("/api/sidebar")
+    @RequestMapping("/sidebar")
     public List<Menuitems> getSidebarRoutes() {
         return menuitemsService.list();
-
     }
 }
