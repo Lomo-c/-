@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jishu.mapper.MenultemsMapper">
+
+    <resultMap id="BaseResultMap" type="com.jishu.domain.Menultems">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="to" column="to" jdbcType="VARCHAR"/>
+            <result property="tabel" column="tabel" jdbcType="VARCHAR"/>
+            <result property="icon" column="icon" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,to,tabel,
+        icon
+    </sql>
+</mapper>
