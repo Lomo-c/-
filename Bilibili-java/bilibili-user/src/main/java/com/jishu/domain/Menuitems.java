@@ -3,19 +3,16 @@ import java.io.Serializable;
 
 /**
  * 
- * @TableName menultems
+ * @TableName menuitems
  */
 public class Menuitems implements Serializable {
 
     private Integer id;
-    /**
-     * 路由
-     */
-    private String to;
+    private String redirect_url;
     /**
      * 标签名
      */
-    private String tabel;
+    private String label;
     /**
      * 图标
      */
@@ -28,18 +25,18 @@ public class Menuitems implements Serializable {
         return this.id;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setRedirect_url(String redirect_url) {
+        this.redirect_url = redirect_url;
     }
-    public String getTo() {
-        return this.to;
+    public String getRedirect_url() {
+        return this.redirect_url;
     }
 
-    public void setTabel(String tabel) {
-        this.tabel = tabel;
+    public void setLabel(String label) {
+        this.label = label;
     }
-    public String getTabel() {
-        return this.tabel;
+    public String getLabel() {
+        return this.label;
     }
 
     public void setIcon(String icon) {

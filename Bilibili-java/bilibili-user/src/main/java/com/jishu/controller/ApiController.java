@@ -12,10 +12,6 @@ import java.util.List;
 public class ApiController {
     @Autowired
     private IMenuitemsService menuitemsService;
-    @RequestMapping("/api")
-    public String controllertest(){
-        return "ok";
-    }
 
     @RequestMapping("/api/sidebar")
     public List<Menuitems> getSidebarRoutes() {
