@@ -1,15 +1,13 @@
 package com.jishu.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.experimental.Accessors;
+import java.util.Date;
 
 /**
  * <p>
@@ -19,50 +17,37 @@ import lombok.experimental.Accessors;
  * @author <a href="https://fengwenyi.com?fs=mpcg">Ji shu</a>
  * @since 2025-06-17
  */
-@Getter
-@Setter
-@Accessors(chain = true)
+@Data
 @TableName("videos")
 public class VideosEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @TableField("thumbnail_url")
     private String thumbnailUrl;
 
     /**
-     * 格式为HH:MM或MM:SS
+     * 视频时长，单位：秒
      */
-    @TableField("duration")
-    private String duration;
+    private Integer duration;
 
-    @TableField("title")
     private String title;
 
-    @TableField("views")
     private Integer views;
 
     /**
-     * 存储显示的格式如"70.4万次播放"
+     * 视频作者ID，关联user_info表
      */
-    @TableField("views_display")
-    private String viewsDisplay;
-
-    @TableField("upload_date")
-    private LocalDate uploadDate;
+    private Long authorId;
 
     /**
-     * 存储显示的格式如"4天前"
+     * 上传时间
      */
-    @TableField("upload_date_display")
-    private String uploadDateDisplay;
+    private LocalDateTime uploadDate;
 
-    @TableField("created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
-    @TableField("updated_at")
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 }

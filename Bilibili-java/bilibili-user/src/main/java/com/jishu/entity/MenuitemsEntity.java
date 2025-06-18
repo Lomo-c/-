@@ -1,13 +1,13 @@
 package com.jishu.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableField;
+import lombok.Data;
+
+import java.io.Serial;
 import java.io.Serializable;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.experimental.Accessors;
 
 /**
  * <p>
@@ -17,29 +17,33 @@ import lombok.experimental.Accessors;
  * @author <a href="https://fengwenyi.com?fs=mpcg">Ji shu</a>
  * @since 2025-06-17
  */
-@Getter
-@Setter
-@Accessors(chain = true)
-@TableName("menuitems")
-public class MenuitemsEntity implements Serializable {
+@Data
+@TableName("menu_items")
+public class MenuItemsEntity implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @TableField("redirect_url")
-    private String redirectUrl;
+    /**
+     * 名称
+     */
+    private String name;
 
     /**
-     * 标签名
+     * 路由地址
      */
-    @TableField("label")
-    private String label;
+    private String path;
+
+    /**
+     * 组件路径
+     */
+    private String component;
 
     /**
      * 图标
      */
-    @TableField("icon")
     private String icon;
 }

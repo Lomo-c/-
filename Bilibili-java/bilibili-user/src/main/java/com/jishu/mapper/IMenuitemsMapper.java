@@ -1,7 +1,7 @@
 package com.jishu.mapper;
 
-import com.jishu.entity.MenuitemsEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jishu.entity.MenuItemsEntity;
 
 /**
  * <p>
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author <a href="https://fengwenyi.com?fs=mpcg">Ji shu</a>
  * @since 2025-06-17
  */
-public interface IMenuitemsMapper extends BaseMapper<MenuitemsEntity> {
+public interface IMenuItemsMapper extends BaseMapper<MenuItemsEntity> {
 
 }

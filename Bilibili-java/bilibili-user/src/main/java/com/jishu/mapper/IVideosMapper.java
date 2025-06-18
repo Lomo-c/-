@@ -1,7 +1,7 @@
 package com.jishu.mapper;
 
-import com.jishu.entity.VideosEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.jishu.entity.VideosEntity;
 
 /**
  * <p>

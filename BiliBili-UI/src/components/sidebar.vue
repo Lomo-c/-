@@ -31,14 +31,14 @@ const menuItems = ref<MenuItem[]>([]);
 onMounted(async () => {
     try {
         const response: any = await request({
-            url: '/sidebar',
+            url: '/routes/list',
             method: 'get'
         });
         menuItems.value = response.map((item: any) => ({
-            to: item.redirectUrl,
-            label: item.label,
+            to: item.path,
+            label: item.name,
             svg: item.icon,
-            exact: item.redirectUrl === '/',
+            exact: item.path === '/',
         }));
     } catch (error) {
         console.error('Failed to fetch sidebar data:', error);

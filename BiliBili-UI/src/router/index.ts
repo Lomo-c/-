@@ -1,26 +1,38 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
+import request from '../utils/request'
 import Home from '../views/Home.vue'
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  { path: '/history', name: 'History', component: () => import('../views/History.vue') },
-  { path: '/movie', name: 'Movie', component: Home },
-  { path: '/tv', name: 'TV', component: Home },
-  { path: '/game', name: 'Game', component: Home },
-  { path: '/tech', name: 'Tech', component: Home },
-  { path: '/vlog', name: 'Vlog', component: Home },
-  { path: '/food', name: 'Food', component: Home },
-  { path: '/variety', name: 'Variety', component: Home },
-  { path: '/kids', name: 'Kids', component: Home },
-]
+const componentMap: Record<string, any> = {
+  'Home': Home,
+  'History': import('../views/History.vue'),
+}
 
-const router = createRouter({
-  history: createWebHistory(),
-  routes
-})
+async function createDynamicRouter() {
+  const staticRoutes: RouteRecordRaw[] = []
 
-export default router 
+  let dynamicRoutes: RouteRecordRaw[] = []
+  try {
+    const response: any[] = await request({
+      url: '/routes/list',
+      method: 'get'
+    })
+
+    dynamicRoutes = response.map(item => ({
+      path: item.path,
+      name: item.name,
+      component: componentMap[item.component] || Home
+    }))
+
+  } catch (error) {
+    console.error('Failed to fetch routes:', error)
+  }
+
+  const router = createRouter({
+    history: createWebHistory(),
+    routes: [...staticRoutes, ...dynamicRoutes]
+  })
+
+  return router
+}
+
+export { createDynamicRouter } 

@@ -10,10 +10,20 @@
             <h2 class="card-title text-base font-bold leading-tight" style="display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                 {{ title }}
             </h2>
-            <div class="text-gray-500 text-sm mt-1">
-                <span>{{ views }}</span>
-                <span class="mx-1">·</span>
-                <span>{{ uploadDate }}</span>
+            <div class="flex items-center mt-2">
+                 <div class="avatar mr-2" v-if="authorAvatar">
+                    <div class="w-6 h-6 rounded-full">
+                        <img :src="authorAvatar" />
+                    </div>
+                </div>
+                <div class="text-gray-500 text-sm">
+                    <div>{{ authorName }}</div>
+                    <div>
+                        <span>{{ views }}</span>
+                        <span class="mx-1">·</span>
+                        <span>{{ uploadDate }}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -26,5 +36,7 @@ defineProps<{
     title: string;
     views: string;
     uploadDate: string;
+    authorName: string;
+    authorAvatar?: string;
 }>();
 </script> 
