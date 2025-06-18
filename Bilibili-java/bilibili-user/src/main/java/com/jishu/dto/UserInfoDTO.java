@@ -7,7 +7,6 @@ import java.time.LocalDateTime;
 
 /**
  * 用户信息
- *
  * @author Jishu
  * @since 2025/06/18
  */
