@@ -6,10 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.jishu.mapper")
-public class BilibiliUserApplication {
+public class BilibiliApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BilibiliUserApplication.class, args);
+        SpringApplication.run(BilibiliApplication.class, args);
     }
-
 }

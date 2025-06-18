@@ -15,7 +15,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="bilibili_user@localhost" uuid="42718cce-f653-44a9-913e-b8d197d26518">
+    <data-source source="LOCAL" name="bilibili_user@localhost" uuid="dbccec19-f7fe-4994-b916-190ceed9ba86">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
